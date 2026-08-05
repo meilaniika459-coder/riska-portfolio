@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Portfolio Saya</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        html{
+            scroll-behavior:smooth;
+        }
+
+        .hero{
+            background:linear-gradient(135deg,#0d6efd,#6610f2);
+            color:white;
+            padding:100px 0;
+        }
+
+        .card{
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        footer{
+            background:#212529;
+            color:white;
+            padding:20px;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Portfolio</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#beranda">Beranda</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#profil">Profil</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#galeri">Galeri</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero text-center" id="beranda">
+    <div class="container">
+
+        <h1 class="display-4 fw-bold">
+            Selamat Datang!
+        </h1>
+
+        <p class="lead" id="teks">
+            Ini adalah website portfolio saya.
+            Belajar, Berkarya dan Berprestasi.
+        </p>
+
+        <button class="btn btn-warning me-2" onclick="lihatProfil()">
+            Lihat Profil
+        </button>
+
+        <button class="btn btn-success me-2" onclick="ubahWarna()">
+            Ubah Warna
+        </button>
+
+        <button class="btn btn-dark" onclick="darkMode()">
+            Dark Mode
+        </button>
+
+    </div>
+</section>
+
+<!-- Card -->
+<section class="container my-5" id="profil">
+
+    <div class="text-center mb-4">
+        <h2>Tentang Saya</h2>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body text-center">
+
+                    <h3>👤</h3>
+
+                    <h5>Data Diri</h5>
+
+                    <p>
+                        Nama : Riska Meilani<br>
+                        Kelas : XII RPL 3<br>
+                        Sekolah : SMK Muhammadiyah Majenang
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body text-center">
+
+                    <h3>🎓</h3>
+
+                    <h5>Pendidikan</h5>
+
+                    <p>
+                        Mengambil Jurusan RPL Agar bisa menguasai di bidang IT
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body text-center">
+
+                    <h3>⭐</h3>
+
+                    <h5>Hobi</h5>
+
+                    <p>
+                        Tiktokan, Foya Foya, Treveling, Dan Kulineran
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Galeri -->
+<section class="container my-5" id="galeri">
+
+    <h2 class="text-center mb-4">Galeri</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <img src="https://picsum.photos/400/250?1" class="img-fluid rounded shadow">
+        </div>
+
+        <div class="col-md-4">
+            <img src="https://picsum.photos/400/250?2" class="img-fluid rounded shadow">
+        </div>
+
+        <div class="col-md-4">
+            <img src="https://picsum.photos/400/250?3" class="img-fluid rounded shadow">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Kontak -->
+<section class="container my-5" id="kontak">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <h2 class="text-center mb-4">Kontak</h2>
+
+            <div class="card shadow">
+
+                <div class="card-body">
+
+                    <div class="mb-3">
+                        <label>Nama</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input type="email" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Pesan</label>
+                        <textarea class="form-control"></textarea>
+                    </div>
+
+                    <button class="btn btn-primary w-100" onclick="kirimPesan()">
+                        Kirim
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="text-center">
+    © 2025 Portfolio | Dibuat dengan Bootstrap 5 & JavaScript
+</footer>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+function lihatProfil(){
+    alert("Selamat datang di halaman profil saya!");
+}
+
+function ubahWarna(){
+
+    let body=document.getElementById("body");
+
+    body.style.backgroundColor="#d1ecf1";
+
+    document.getElementById("teks").innerHTML=
+    "Terima kasih sudah mengunjungi website saya.";
+}
+
+function kirimPesan(){
+    alert("Pesan berhasil dikirim.");
+}
+
+function darkMode(){
+
+    let html=document.documentElement;
+
+    if(html.getAttribute("data-bs-theme")=="light"){
+        html.setAttribute("data-bs-theme","dark");
+    }else{
+        html.setAttribute("data-bs-theme","light");
+    }
+
+}
+
+</script>
+
+</body>
+</html>
